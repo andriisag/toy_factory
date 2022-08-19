@@ -1,19 +1,15 @@
 class Factory():
-       def __init__(self, name, color, type):
-        self.name = name
-        self.color = color
-        self.type = type
-
        def materials(self):
            print("Купуємо сировину")
        def sew(self):
           print("Шиємо")    
        def paint(self):
-           print("Фарбуємо")         
-
+           print("Фарбуємо")
 class Toy(Factory):
-       def show(self):
-           return f"{self.name}, {self.color}, {self.type}"
+       def __init__(self, name, color, type):
+        self.name = name
+        self.color = color
+        self.type = type    
 class Animal(Toy):
       def show(self):
            return f"Тварина  {self.name}, {self.color}, {self.type}"
